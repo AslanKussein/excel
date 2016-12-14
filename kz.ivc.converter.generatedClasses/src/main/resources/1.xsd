@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="Workspace" type="WorkspaceType"/>
+    <xs:complexType name="WorkspaceType">
+        <xs:sequence>
+            <xs:element name="Sheet" type="SheetType" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SheetType">
+        <xs:sequence>
+            <xs:element name="Row" type="RowType" maxOccurs="unbounded" minOccurs="1"/>
+            <xs:element name="Col" type="ColType" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="SheetName" type="xs:string"/>
+        <xs:attribute name="landScape" type="xs:boolean"/>
+        <xs:attribute name="ColNum" type="xs:int" />
+        <xs:attribute name="RowNum" type="xs:int" />
+    </xs:complexType>
+
+    <xs:complexType name="ColType">
+        <xs:sequence>
+            <xs:element name="Column" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="ColName" type="xs:string"/>
+        <xs:attribute name="ColIndex" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="RowType">
+        <xs:sequence>
+            <xs:element name="height" type="xs:double" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="Cell" type="CellsType" maxOccurs="unbounded" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="row_index" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="CellsType">
+        <xs:sequence>
+            <xs:element name="Value" minOccurs="1" maxOccurs="1" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="index" type="xs:int"/>
+        <xs:attribute name="width" type="xs:double" default="5"/>
+
+        <xs:attribute name="bold" type="xs:boolean" default="false"/>
+        <xs:attribute name="italic" type="xs:boolean" default="false"/>
+        <xs:attribute name="underline" type="xs:byte" default="0"/>
+        <xs:attribute name="text_align" type="xs:short" default="1"/>
+
+        <xs:attribute name="border_top" type="xs:short" default="1"/>
+        <xs:attribute name="border_right" type="xs:short" default="1"/>
+        <xs:attribute name="border_bottom" type="xs:short" default="1"/>
+        <xs:attribute name="border_left" type="xs:short" default="1"/>
+    </xs:complexType>
+
+
+
+</xs:schema>

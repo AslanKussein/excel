@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kz.ivc.converter.iml" filepath="$PROJECT_DIR$/kz.ivc.converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kz.ivc.converter.excelAndWordConverter/kz.ivc.converter.excelAndWordConverter.iml" filepath="$PROJECT_DIR$/kz.ivc.converter.excelAndWordConverter/kz.ivc.converter.excelAndWordConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kz.ivc.converter.generatedClasses/kz.ivc.converter.generatedClasses.iml" filepath="$PROJECT_DIR$/kz.ivc.converter.generatedClasses/kz.ivc.converter.generatedClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kz.ivc.converter.xsdToXml/kz.ivc.converter.xsdToXml.iml" filepath="$PROJECT_DIR$/kz.ivc.converter.xsdToXml/kz.ivc.converter.xsdToXml.iml" />
+    </modules>
+  </component>
+</project>
